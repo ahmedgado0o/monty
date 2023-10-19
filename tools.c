@@ -1,12 +1,12 @@
 #include "monty.h"
 
 /**
- * opf - opens
+ * o_f - opens
  * @f_n: file name
  * Return:
  */
 
-void opf(char *f_n)
+void o_f(char *f_n)
 {
 	FILE *ffdd = fopen(f_n, "r");
 
@@ -70,49 +70,49 @@ int p_l(char *buf, int l_n, int f)
 
 /**
  * f_f - find functiob
- * @opc: op code
+ * @opcode: op code
  * @v: argument
  * @f:  stored format
  * @l_nn: line
  * Return:
  */
-void f_f(char *opc, char *v, int l_nn, int f)
+void f_f(char *opcode, char *v, int l_nn, int f)
 {
 	int iii;
 	int fl;
 
-	instruction_t f_l[] = {
+	instruction_t func_list[] = {
 		{"push", a_t_s},
 		{"pall", p_s},
 		{"pint", p_t},
 		{"pop", pop_t},
-		{"nop", nop},
-		{"swap", swap_nodes},
-		{"add", add_nodes},
-		{"sub", sub_nodes},
-		{"div", div_nodes},
-		{"mul", mul_nodes},
-		{"mod", mod_nodes},
-		{"pchar", print_char},
-		{"pstr", print_str},
-		{"rotl", rotl},
-		{"rotr", rotr},
+		{"nop", no},
+		{"swap", s_n},
+		{"add", a_n},
+		{"sub", sub_n},
+		{"div", d_n},
+		{"mul", m_n},
+		{"mod", mo_n},
+		{"pchar", p_c},
+		{"pstr", p_s},
+		{"rotl", rotttl},
+		{"rotr", rotttr},
 		{NULL, NULL}
 	};
 
-	if (opc[0] == '#')
+	if (opcode[0] == '#')
 		return;
 
-	for (fl = 1, iii = 0; f_l[iii].opc != NULL; iii++)
+	for (fl = 1, iii = 0; func_list[iii].opcode != NULL; iii++)
 	{
-		if (strcmp(opc, f_l[iii].opc) == 0)
+		if (strcmp(opcode, func_list[iii].opcode) == 0)
 		{
-			c_f(f_l[iii].f, opc, v, l_nn, f);
+			c_f(func_list[iii].f, opcode, v, l_nn, f);
 			fl = 0;
 		}
 	}
 	if (fl == 1)
-		errors(3, l_nn, opc);
+		errors(3, l_nn, opcode);
 }
 
 

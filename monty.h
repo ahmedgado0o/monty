@@ -43,7 +43,7 @@ extern stack_t *head;
 typedef void (*op_func)(stack_t **, unsigned int);
 
 /*file operations*/
-void opf(char *f_n);
+void o_f(char *f_n);
 int p_l(char *buf, int l_n, int f);
 void r_f(FILE *ffd);
 int len_chars(FILE *);
@@ -60,26 +60,26 @@ void c_f(op_func function, char *opcc, char *value, int l_nn, int f);
 
 void p_t(stack_t **s, unsigned int l_n);
 void pop_t(stack_t **s, unsigned int l_n);
-void nop(stack_t **, unsigned int);
-void swap_nodes(stack_t **, unsigned int);
+void no(stack_t **s, unsigned int l_n);
+void s_n(stack_t **s, unsigned int l_n);
 
 /*Math operations with nodes*/
-void add_nodes(stack_t **, unsigned int);
-void sub_nodes(stack_t **, unsigned int);
-void div_nodes(stack_t **, unsigned int);
-void mul_nodes(stack_t **, unsigned int);
-void mod_nodes(stack_t **, unsigned int);
+void a_n(stack_t **s, unsigned int l_n);
+void sub_n(stack_t **s, unsigned int l_n);
+void d_n(stack_t **s, unsigned int l_n);
+void m_n(stack_t **s, unsigned int l_n);
+void mo_n(stack_t **s, unsigned int l_n);
 
 /*String operations*/
-void print_char(stack_t **, unsigned int);
-void print_str(stack_t **, unsigned int);
-void rotl(stack_t **, unsigned int);
+void p_c(stack_t **s, unsigned int l_n);
+void p_str(stack_t **s, __attribute__((unused))unsigned int lln);
+void rotttl(stack_t **s, __attribute__((unused))unsigned int lln);
 
 /*Error hanlding*/
 void errors(int err, ...);
 void errors_2(int err, ...);
 void error_str(int err, ...);
-void rotr(stack_t **, unsigned int);
+void rotttr(stack_t **s, __attribute__((unused))unsigned int lln);
 
 #endif
 
