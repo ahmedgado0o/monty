@@ -43,23 +43,23 @@ extern stack_t *head;
 typedef void (*op_func)(stack_t **, unsigned int);
 
 /*file operations*/
-void open_file(char *file_name);
-int parse_line(char *buffer, int line_number, int format);
-void read_file(FILE *);
+void opf(char *f_n);
+int p_l(char *buf, int l_n, int f);
+void r_f(FILE *ffd);
 int len_chars(FILE *);
-void find_func(char *, char *, int, int);
+void f_f(char *opc, char *v, int l_nn, int f);
 
 /*Stack operations*/
-stack_t *create_node(int n);
-void free_nodes(void);
-void print_stack(stack_t **, unsigned int);
-void add_to_stack(stack_t **, unsigned int);
-void add_to_queue(stack_t **, unsigned int);
+stack_t *c_n(int num);
+void f_n(void);
+void p_s(stack_t **s, unsigned int l_n);
+void a_t_s(stack_t **n_n, __attribute__((unused))unsigned int l);
+void a_t_q(stack_t **n_n, __attribute__((unused))unsigned int l);
 
-void call_fun(op_func, char *, char *, int, int);
+void c_f(op_func function, char *opcc, char *value, int l_nn, int f);
 
-void print_top(stack_t **, unsigned int);
-void pop_top(stack_t **, unsigned int);
+void p_t(stack_t **s, unsigned int l_n);
+void pop_t(stack_t **s, unsigned int l_n);
 void nop(stack_t **, unsigned int);
 void swap_nodes(stack_t **, unsigned int);
 

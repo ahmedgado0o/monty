@@ -35,7 +35,7 @@ void errors(int err, ...)
 		default:
 			break;
 	}
-	free_nodes();
+	f_n();
 	exit(EXIT_FAILURE);
 }
 
@@ -73,7 +73,7 @@ void errors_2(int err, ...)
 		default:
 			break;
 	}
-	free_nodes();
+	f_n();
 	exit(EXIT_FAILURE);
 }
 
@@ -99,7 +99,7 @@ void error_str(int err, ...)
 		default:
 			break;
 	}
-	free_nodes();
+	f_n();
 	exit(EXIT_FAILURE);
 }
 
